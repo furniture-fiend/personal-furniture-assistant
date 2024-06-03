@@ -1,4 +1,3 @@
-/ (root)
-  |- index.html
-  |- styles.css
-  |- script.js
+git add index.html styles.css script.js
+git commit -m "Updated to include Pinterest board section"
+git push origin main
