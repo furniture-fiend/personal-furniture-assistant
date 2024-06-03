@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Furniture Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Furniture Assistant</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#virtual-room">Virtual Room</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <h2>Welcome to Your Personal Furniture Assistant</h2>
+        <p>This tool helps you find the best furniture deals based on your preferences.</p>
+    </main>
+
+    <section id="search">
+        <h2>Search Furniture</h2>
+        <div>
+            <input type="text" id="searchText" placeholder="Search by description...">
+            <button onclick="searchByText()">Search</button>
+        </div>
+        <div>
+            <input type="file" id="searchImage" accept="image/*">
+            <button onclick="searchByImage()">Search by Image</button>
+        </div>
+    </section>
+
+    <section id="virtual-room">
+        <h2>Virtual Room Setup</h2>
+        <select id="roomSelector" onchange="loadRoom()">
+            <option value="living">Living</option>
+            <option value="primary-bedroom">Primary Bedroom</option>
+            <option value="bedroom">Bedroom</option>
+            <option value="dining-area">Dining Area</option>
+            <option value="office">Office/Guest Bonus Room</option>
+        </select>
+        <div id="floorPlan"></div>
+    </section>
+
+    <section id="notifications">
+        <h2>Notifications</h2>
+        <div id="notificationsList">
+            <!-- Notifications will be listed here -->
+        </div>
+    </section>
+
+    <section id="comparison">
+        <h2>Comparison Tool</h2>
+        <div id="comparisonList">
+            <!-- Comparison results will be listed here -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
