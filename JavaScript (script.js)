@@ -1,0 +1,42 @@
+document.addEventListener('DOMContentLoaded', function() {
+    loadRoom();
+});
+
+function searchByText() {
+    const searchText = document.getElementById('searchText').value;
+    alert(`Searching for: ${searchText}`);
+    // Implement the search functionality here
+}
+
+function searchByImage() {
+    const searchImage = document.getElementById('searchImage').files[0];
+    if (searchImage) {
+        alert(`Searching for image: ${searchImage.name}`);
+        // Implement the image search functionality here
+    } else {
+        alert('Please select an image to search.');
+    }
+}
+
+function loadRoom() {
+    const room = document.getElementById('roomSelector').value;
+    const floorPlanDiv = document.getElementById('floorPlan');
+    floorPlanDiv.innerHTML = `<img src="${room}.png" alt="${room}" style="width: 100%; height: 100%;">`;
+    // Ensure you have room images named 'living.png', 'primary-bedroom.png', etc.
+}
+
+// Example function to add notifications
+function addNotification(message) {
+    const notificationsList = document.getElementById('notificationsList');
+    const notificationItem = document.createElement('div');
+    notificationItem.textContent = message;
+    notificationsList.appendChild(notificationItem);
+}
+
+// Example function to add comparison items
+function addComparisonItem(item) {
+    const comparisonList = document.getElementById('comparisonList');
+    const comparisonItem = document.createElement('div');
+    comparisonItem.textContent = item;
+    comparisonList.appendChild(comparisonItem);
+}
